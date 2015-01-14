@@ -4,7 +4,7 @@ build:
 
 .PHONY: run
 run:
-	- docker run -v `pwd`:/opt/mnist mnist bash -c "julia /opt/mnist/mnist.jl"
+	- docker run -v `pwd`:/opt/mnist -w /opt/mnist mnist bash -c "julia ./mnist.jl"
 
 .PHONY: sim
 sim:
